@@ -21,6 +21,9 @@ function my_plugin_admin_enqueue_styles() {
 }
 add_action( 'admin_enqueue_scripts', 'my_plugin_admin_enqueue_styles' );
 
+wp_register_style('prefix_bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+wp_enqueue_style('prefix_bootstrap');
+
 // Register a function to run during plugin activation
 register_activation_hook( __FILE__, 'my_lm_plugin_create_table' );
 
